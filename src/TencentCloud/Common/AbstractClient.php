@@ -309,8 +309,8 @@ abstract class AbstractClient
         $headers["Host"] = $endpoint;
         $headers["X-TC-Action"] = ucfirst($action);
         $headers["X-TC-RequestClient"] = $this->sdkVersion;
-//        $headers["X-TC-Timestamp"] = time();
-        $headers["X-TC-Timestamp"] = strtotime("+37 minutes");
+        $headers["X-TC-Timestamp"] = time();
+//        $headers["X-TC-Timestamp"] = strtotime("+37 minutes");
 //        $headers["X-TC-Timestamp"] = strtotime('60 minutes');
         $headers["X-TC-Version"] = $this->apiVersion;
 
@@ -456,8 +456,8 @@ abstract class AbstractClient
         $param["Action"] = ucfirst($action);
         $param["RequestClient"] = $this->sdkVersion;
         $param["Nonce"] = rand();
-//        $param["Timestamp"] = time();
-        $param["Timestamp"] = strtotime("+37 minutes");
+        $param["Timestamp"] = time();
+//        $param["Timestamp"] = strtotime("+37 minutes");
         $param["Version"] = $this->apiVersion;
 
         if ($this->credential->getSecretId()) {
